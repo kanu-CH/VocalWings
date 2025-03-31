@@ -279,7 +279,7 @@ body {
 }
 
 .header::after {
-  content: "x";
+  content: "";
   position: absolute;
   bottom: 0;
   left: 50%;
