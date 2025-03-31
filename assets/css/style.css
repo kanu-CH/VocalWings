@@ -276,7 +276,7 @@ body {
 }
 
 .header::after {
-  content: "";
+  content: "x";
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -1515,6 +1515,9 @@ body {
 
 @media (max-width: 992px) {
   .testi-banner {
+    display: none;
+  }
+  .header-action .btn{
     display: none;
   }
 }
