@@ -7,42 +7,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VocalWings - Learn About Us</title>
 
-  <!-- 
-    - favicon
-  -->
+  <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="./favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
   <link rel="apple-touch-icon" href="./apple-touch-icon.png">
-  
 
-
-  <!-- 
-    - custom css link
-  -->
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="./assets/css/audio&learn&tweets.css">
 
-  <!-- 
-    - google font link
-  -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto:wght@300;400;500;700&family=Oswald:wght@600&display=swap"
     rel="stylesheet">
 
-   
-      <!-- Ionicons CDN -->
-      <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.esm.js"></script>
-      <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.js"></script>
-    
+  <!-- Ionicons CDN -->
+  <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.js"></script>
+
 </head>
 
 <body>
 
-  <!-- 
-    - #HEADER
-  -->
-
+  <!-- HEADER -->
   <header class="header" data-header>
     <div class="container">
 
@@ -64,183 +52,119 @@
 
         <ul class="navbar-list">
 
-          <li>
-            <a href="index.html#home" class="navbar-link" data-nav-link>
-              <span>Home</span>
-
-              <ion-icon name="chevron-forward-outline" aria-hidden="true"></ion-icon>
-            </a>
-          </li>
-
-          <li>
-            <a href="index.html#about" class="navbar-link" data-nav-link>
-              <span>About</span>
-
-              <ion-icon name="chevron-forward-outline" aria-hidden="true"></ion-icon>
-            </a>
-          </li>
-
-          <li>
-            <a href="index.html#service" class="navbar-link" data-nav-link>
-              <span>Service</span>
-
-              <ion-icon name="chevron-forward-outline" aria-hidden="true"></ion-icon>
-            </a>
-          </li>
-
-          <li>
-            <a href="index.html#species" class="navbar-link" data-nav-link>
-              <span>Avian Wonders</span>
-
-              <ion-icon name="chevron-forward-outline" aria-hidden="true"></ion-icon>
-            </a>
-          </li>
-
-          <li>
-            <a href="tweets.html" class="navbar-link" data-nav-link target="_blank">
-              <span>Tweets</span>
-
-              <ion-icon name="chevron-forward-outline" aria-hidden="true"></ion-icon>
-            </a>
-          </li>
-
-          <li>
-            <a href="#footer" class="navbar-link" data-nav-link>
-              <span>Contact</span>
-
-              <ion-icon name="chevron-forward-outline" aria-hidden="true"></ion-icon>
-            </a>
-          </li>
+          <li><a href="index.html#home" class="navbar-link" data-nav-link><span>Home</span></a></li>
+          <li><a href="index.html#about" class="navbar-link" data-nav-link><span>About</span></a></li>
+          <li><a href="index.html#service" class="navbar-link" data-nav-link><span>Service</span></a></li>
+          <li><a href="index.html#species" class="navbar-link" data-nav-link><span>Avian Wonders</span></a></li>
+          <li><a href="tweets.html" class="navbar-link" target="_blank"><span>Tweets</span></a></li>
+          <li><a href="#footer" class="navbar-link" data-nav-link><span>Contact</span></a></li>
 
         </ul>
 
       </nav>
 
       <div class="header-action">
-
         <button class="btn btn-primary" onclick="window.open('audio.html', '_blank')">
           <span>Explore</span>
-
           <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
         </button>
-
       </div>
 
     </div>
   </header>
 
+  <!-- UPLOAD SECTION -->
+  <section class="uploaded">
+    <div class="uploaded-content container">
 
-      <!-- upload section -->
-<div class="container">
-    <section class="uploaded">
+      <p class="section-subtitle">
+        <img src="./assets/images/subtitle-img-green.png" width="32" height="7" alt="Wavy line">
+        <span>Learn About Us</span>
+      </p>
 
-        <div class="uploaded-content">
+      <h2 class="h2 section-title">
+        Discover <strong>Who We Are</strong>
+      </h2>
 
-          <p class="section-subtitle">
-            <img src="./assets/images/subtitle-img-green.png" width="32" height="7" alt="Wavy line">
-
-            <span>Learn About Us</span>
-          </p>
-
-          <h2 class="h2 section-title">
-            Discover <strong>Who We Are</strong>
-          </h2>
-
-          <div class="uploaded-card">
-            <div class="flex-container">
-              <ion-icon name="earth-outline"></ion-icon>
-              <h3 class="uploaded-name">Our Mission</h3>
-            </div>
-          <br>
-            <blockquote class="section-text">
-              <p>We are dedicated to advancing the understanding of avian species through cutting-edge bioacoustic research. By leveraging neural inference models, we analyze bird calls and vocalizations to enhance species identification and support global conservation efforts.</p>
-            </blockquote>
-          </div>
-          
-          <br>
-         
-          <div class="uploaded-card">
-            <div class="flex-container">
-              <ion-icon name="analytics-outline"></ion-icon>
-              <h3 class="uploaded-name">What We Do</h3>
-            </div>
-          
-            <blockquote class="section-text">
-              <p>Our research integrates machine learning, deep learning, and bioacoustics to develop accurate models that classify bird species based on their unique sound patterns. 
-                <br>Key areas of focus include:</p>
-              <ul>
-                <li><strong>🎤 Audio Data Collection:</strong> Recording and processing avian vocalizations from diverse habitats.</li>
-                <li><strong>🤖 Neural Network Training:</strong> Developing AI models for real-time bird call classification.</li>
-                <li><strong>🌿 Conservation Impact:</strong> Assisting researchers and conservationists in tracking bird populations.</li>
-              </ul>
-            </blockquote>
-          </div>
-          
+      <div class="uploaded-card">
+        <div class="flex-container">
+          <ion-icon name="earth-outline"></ion-icon>
+          <h3 class="uploaded-name">Our Mission</h3>
+        </div>
         <br>
-        <div class="uploaded-card">
-            <div class="flex-container">
-              <ion-icon name="leaf-outline"></ion-icon>
-              <h3 class="uploaded-name">Why This Research Matters</h3>
-            </div>
-          
-            <blockquote class="section-text">
-              <p>Bird populations are crucial indicators of environmental health. With habitat loss and climate change affecting avian species, our technology-driven approach helps:</p>
-              <ul>
-                <li>🌎 Automate species identification</li>
-                <li>📊 Monitor biodiversity changes over time</li>
-                <li>🦉 Support conservation strategies through data-driven insights</li>
-              </ul>
-            </blockquote>
-          </div>
-          
-          <br>
-          <div class="uploaded-card">
-            <div class="flex-container">
-              <ion-icon name="happy-outline"></ion-icon>
-              <h3 class="uploaded-name">Join Us in Advancing Bioacoustic Science</h3>
-            </div>
-            <blockquote class="section-text">
-              <p>Our project is a step toward making avian taxonomy more accessible and precise. We welcome researchers, developers, and nature enthusiasts to contribute and collaborate.</p>
-            </blockquote>
-          </div>
+        <blockquote class="section-text">
+          <p>We are dedicated to advancing the understanding of avian species through cutting-edge bioacoustic research. By leveraging neural inference models, we analyze bird calls and vocalizations to enhance species identification and support global conservation efforts.</p>
+        </blockquote>
+      </div>
 
+      <br>
+
+      <div class="uploaded-card">
+        <div class="flex-container">
+          <ion-icon name="analytics-outline"></ion-icon>
+          <h3 class="uploaded-name">What We Do</h3>
         </div>
 
-        <figure class="uploaded-banner">
-          <img src="./assets/images/testi-banner-2.jpg" width="960" height="846" loading="lazy" alt="Rhinoceros"
-            class="img-cover">
-        </figure>
+        <blockquote class="section-text">
+          <p>Our research integrates machine learning, deep learning, and bioacoustics to develop accurate models that classify bird species based on their unique sound patterns.
+            <br>Key areas of focus include:</p>
+          <ul>
+            <li><strong>🎤 Audio Data Collection:</strong> Recording and processing avian vocalizations from diverse habitats.</li>
+            <li><strong>🤖 Neural Network Training:</strong> Developing AI models for real-time bird call classification.</li>
+            <li><strong>🌿 Conservation Impact:</strong> Assisting researchers and conservationists in tracking bird populations.</li>
+          </ul>
+        </blockquote>
+      </div>
 
-      </section>
-</div>
-      
+      <br>
 
+      <div class="uploaded-card">
+        <div class="flex-container">
+          <ion-icon name="leaf-outline"></ion-icon>
+          <h3 class="uploaded-name">Why This Research Matters</h3>
+        </div>
 
+        <blockquote class="section-text">
+          <p>Bird populations are crucial indicators of environmental health. With habitat loss and climate change affecting avian species, our technology-driven approach helps:</p>
+          <ul>
+            <li>🌎 Automate species identification</li>
+            <li>📊 Monitor biodiversity changes over time</li>
+            <li>🦉 Support conservation strategies through data-driven insights</li>
+          </ul>
+        </blockquote>
+      </div>
 
+      <br>
 
+      <div class="uploaded-card">
+        <div class="flex-container">
+          <ion-icon name="happy-outline"></ion-icon>
+          <h3 class="uploaded-name">Join Us in Advancing Bioacoustic Science</h3>
+        </div>
+        <blockquote class="section-text">
+          <p>Our project is a step toward making avian taxonomy more accessible and precise. We welcome researchers, developers, and nature enthusiasts to contribute and collaborate.</p>
+        </blockquote>
+      </div>
 
+    </div>
 
-      
+    <figure class="uploaded-banner">
+      <img src="./assets/images/testi-banner-2.jpg" width="960" height="846" loading="lazy" alt="Rhinoceros" class="img-cover">
+    </figure>
 
+  </section>
 
-
-
-  <!-- 
-    - #FOOTER
-  -->
-
+  <!-- FOOTER -->
   <footer class="footer" id="footer">
     <div class="container">
-  
+
       <div class="footer-content">
-        
-        <!-- About Section -->
+
         <div class="footer-section about-footer">
           <h3>About Us</h3>
           <p>We specialize in bioacoustic research, leveraging AI to analyze avian sounds and contribute to wildlife conservation.</p>
         </div>
-  
-        <!-- Quick Links -->
+
         <div class="footer-section quick-links">
           <h3>Quick Links</h3>
           <ul class="footer-list">
@@ -250,49 +174,42 @@
             <li><a href="#footer" class="footer-link">Contact</a></li>
           </ul>
         </div>
-  
-        <!-- Contact Section -->
+
         <div class="footer-section contact">
           <h3>Contact Us</h3>
           <div class="contact-info">
-            <p><ion-icon name="mail-outline"></ion-icon> <a href="mailto:contact@kanu-ch.com">contact@kanu-ch.com</a></p>
+            <p><ion-icon name="mail-outline"></ion-icon> <a href="mailto:contact@kanu-ch.com">contact@VocalWings</a></p>
             <p><ion-icon name="call-outline"></ion-icon> <a href="tel:XXXXXXXXXX">+91 XXXXXXXXXX</a></p>
           </div>
           <p><ion-icon name="location-outline"></ion-icon> Ajay Kumar Garg Enginnering College, Ghazibad, Uttar Pradesh</p>
         </div>
-  
-        <!-- Social Media -->
-        <div class="footer-section social">
-          <h3>Follow Us</h3>
-          <div class="social-icons">
-            <a href="#" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a>
-            <a href="#" class="social-link"><ion-icon name="logo-twitter"></ion-icon></a>
-            <a href="#" class="social-link"><ion-icon name="logo-linkedin"></ion-icon></a>
-            <a href="#" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a>
-          </div>
+
+      <!-- Social Media -->
+      <div class="footer-section social">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#" class="social-link" title="Follow us on Facebook"><ion-icon name="logo-facebook"></ion-icon></a>
+          <a href="#" class="social-link" title="Follow us on Twitter"><ion-icon name="logo-twitter"></ion-icon></a>
+          <a href="#" class="social-link" title="LinkedIn"><ion-icon name="logo-linkedin"></ion-icon></a>
+          <a href="#" class="social-link" title="Instagram"><ion-icon name="logo-instagram"></ion-icon></a>
         </div>
-  
       </div>
-  
-      <!-- Footer Bottom -->
+    </div>
+
       <div class="footer-bottom">
         <ul class="footer-list">
           <li><a href="#" class="footer-link">Terms of Use</a></li>
           <li><a href="#" class="footer-link">Privacy Policy</a></li>
         </ul>
-        <p class="copyright">
-          &copy; 2025 <a href="#" class="copyright-link">kanu-CH</a>. All Rights Reserved.
-        </p>
+        <p class="copyright">&copy; 2025 <a href="#" class="copyright-link">VocalWings</a>. All Rights Reserved.</p>
       </div>
-  
+
     </div>
   </footer>
-  
+
+  <!-- JavaScript -->
+  <script src="./assets/js/script.js"></script>
 
 </body>
-<script src="./assets/js/script.js"></script>
-<script>
-  
-</script>
 
 </html>
