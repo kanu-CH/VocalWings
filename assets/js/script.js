@@ -88,15 +88,62 @@ async function uploadAudioFile(file) {
   }
 }
 
-// Tweets
+/**
+ * Tweets persistence
+ */
+
+// Function to load tweets from localStorage
+function loadTweets() {
+  const tweetsContainer = document.querySelector(".tweets-content");
+  const savedTweets = JSON.parse(localStorage.getItem("tweets")) || [];
+
+  savedTweets.forEach(tweet => {
+    // Create a new tweet card for each saved tweet
+    let tweetCard = document.createElement("div");
+    tweetCard.classList.add("tweets-card");
+
+    tweetCard.innerHTML = `
+      <figure class="card-avatar">
+        <img src="./assets/images/profile.png" width="60" height="60" loading="lazy" alt="User">
+      </figure>
+      <div>
+        <blockquote class="tweets-text">${tweet.text}</blockquote>
+        <h3 class="tweets-name">${tweet.name}</h3>
+        <p class="tweets-title">@YourHandle</p>
+      </div>
+    `;
+    
+    // Append new tweet to the tweet section
+    tweetsContainer.appendChild(tweetCard);
+  });
+}
+
+// Function to add a tweet
 function addTweet() {
   let tweetText = document.getElementById("tweetInput").value.trim();
   let tweetName = document.getElementById("tweetName").value.trim();
+
   if (tweetText === "") {
     alert("Please write something before tweeting!");
     return;
   }
 
+  // Create a new tweet object
+  const tweet = {
+    text: tweetText,
+    name: tweetName
+  };
+
+  // Get existing tweets from localStorage, or initialize as an empty array
+  const savedTweets = JSON.parse(localStorage.getItem("tweets")) || [];
+
+  // Add the new tweet to the array
+  savedTweets.push(tweet);
+
+  // Save the updated array back to localStorage
+  localStorage.setItem("tweets", JSON.stringify(savedTweets));
+
+  // Add the tweet to the UI
   let tweetsContainer = document.querySelector(".tweets-content");
 
   // Create a new tweet card
@@ -119,4 +166,8 @@ function addTweet() {
 
   // Clear the input field after submission
   document.getElementById("tweetInput").value = "";
+  document.getElementById("tweetName").value = "";
 }
+
+// Call loadTweets on page load to restore previous tweets
+window.addEventListener("load", loadTweets);
