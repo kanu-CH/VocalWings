@@ -1,122 +1,117 @@
 'use strict';
 
 /**
- * navbar toggle
+ * Initialize the IndexedDB
  */
-const navOpenBtn = document.querySelector("[data-nav-open-btn]");
-const navbar = document.querySelector("[data-navbar]");
-const navCloseBtn = document.querySelector("[data-nav-close-btn]");
+let db;
 
-const navElemArr = [navOpenBtn, navCloseBtn];
+function openDB() {
+  const request = indexedDB.open("TweetsDB", 1);
 
-for (let i = 0; i < navElemArr.length; i++) {
-  navElemArr[i].addEventListener("click", function () {
-    navbar.classList.toggle("active");
-  });
+  // Handle errors
+  request.onerror = (event) => {
+    console.error("Error opening IndexedDB", event);
+  };
+
+  // Create an object store if this is the first time the database is created
+  request.onupgradeneeded = (event) => {
+    db = event.target.result;
+    const store = db.createObjectStore("tweets", { keyPath: "id", autoIncrement: true });
+    store.createIndex("nameIndex", "name", { unique: false });
+    store.createIndex("textIndex", "text", { unique: false });
+  };
+
+  // Success
+  request.onsuccess = (event) => {
+    db = event.target.result;
+    console.log("IndexedDB opened successfully");
+    loadTweets(); // Load tweets from DB on page load
+  };
 }
 
 /**
- * toggle navbar when click any navbar link
+ * Function to add a tweet to IndexedDB
  */
-const navbarLinks = document.querySelectorAll("[data-nav-link]");
+function addTweetToDB(tweet) {
+  const transaction = db.transaction(["tweets"], "readwrite");
+  const store = transaction.objectStore("tweets");
 
-for (let i = 0; i < navbarLinks.length; i++) {
-  navbarLinks[i].addEventListener("click", function () {
-    navbar.classList.remove("active");
-  });
+  // Add tweet to the object store
+  store.add(tweet);
+
+  transaction.oncomplete = () => {
+    console.log("Tweet added successfully");
+    loadTweets(); // Reload tweets after adding
+  };
+
+  transaction.onerror = (event) => {
+    console.error("Error adding tweet", event);
+  };
 }
 
 /**
- * header active when window scrolled down
+ * Function to load tweets from IndexedDB
  */
-const header = document.querySelector("[data-header]");
-
-window.addEventListener("scroll", function () {
-  window.scrollY >= 50 ? header.classList.add("active")
-    : header.classList.remove("active");
-});
-
-/**
- * Tweets persistence
- */
-
-// Function to load tweets from localStorage
 function loadTweets() {
-  const tweetsContainer = document.querySelector(".tweets-list");
-  const savedTweets = JSON.parse(localStorage.getItem("tweets")) || [];
+  const transaction = db.transaction(["tweets"], "readonly");
+  const store = transaction.objectStore("tweets");
 
-  // Clear existing tweets before adding new ones
-  tweetsContainer.innerHTML = '';
+  const request = store.getAll(); // Fetch all tweets
 
-  savedTweets.forEach(tweet => {
-    let tweetCard = document.createElement("div");
-    tweetCard.classList.add("tweets-card");
+  request.onsuccess = () => {
+    const tweets = request.result;
+    const tweetsContainer = document.querySelector(".tweets-list");
+    tweetsContainer.innerHTML = ''; // Clear existing tweets
 
-    tweetCard.innerHTML = `
-      <figure class="card-avatar">
-        <img src="./assets/images/profile.png" width="60" height="60" loading="lazy" alt="User">
-      </figure>
-      <div>
-        <blockquote class="tweets-text">${tweet.text}</blockquote>
-        <h3 class="tweets-name">${tweet.name}</h3>
-        <p class="tweets-title">@YourHandle</p>
-      </div>
-    `;
+    tweets.forEach(tweet => {
+      const tweetCard = document.createElement("div");
+      tweetCard.classList.add("tweets-card");
 
-    // Append new tweet to the container
-    tweetsContainer.appendChild(tweetCard);
-  });
+      tweetCard.innerHTML = `
+        <figure class="card-avatar">
+          <img src="./assets/images/profile.png" width="60" height="60" loading="lazy" alt="User">
+        </figure>
+        <div>
+          <blockquote class="tweets-text">${tweet.text}</blockquote>
+          <h3 class="tweets-name">${tweet.name}</h3>
+          <p class="tweets-title">@${tweet.name}</p>
+        </div>
+      `;
+
+      tweetsContainer.appendChild(tweetCard);
+    });
+  };
+
+  request.onerror = (event) => {
+    console.error("Error loading tweets", event);
+  };
 }
 
-// Function to add a tweet
+/**
+ * Handle tweet submission
+ */
 function addTweet() {
-  let tweetText = document.getElementById("tweetInput").value.trim();
-  let tweetName = document.getElementById("tweetName").value.trim();
+  const tweetText = document.getElementById("tweetInput").value.trim();
+  const tweetName = document.getElementById("tweetName").value.trim();
 
   if (tweetText === "") {
     alert("Please write something before tweeting!");
     return;
   }
 
-  // Create a new tweet object
   const tweet = {
     text: tweetText,
     name: tweetName
   };
 
-  // Get existing tweets from localStorage, or initialize as an empty array
-  const savedTweets = JSON.parse(localStorage.getItem("tweets")) || [];
-
-  // Add the new tweet to the array
-  savedTweets.push(tweet);
-
-  // Save the updated array back to localStorage
-  localStorage.setItem("tweets", JSON.stringify(savedTweets));
-
-  // Add the tweet to the UI
-  let tweetsContainer = document.querySelector(".tweets-list");
-
-  let tweetCard = document.createElement("div");
-  tweetCard.classList.add("tweets-card");
-
-  tweetCard.innerHTML = `
-    <figure class="card-avatar">
-      <img src="./assets/images/profile.png" width="60" height="60" loading="lazy" alt="User">
-    </figure>
-    <div>
-      <blockquote class="tweets-text">${tweetText}</blockquote>
-      <h3 class="tweets-name">${tweetName}</h3>
-      <p class="tweets-title">@YourHandle</p>
-    </div>
-  `;
-
-  // Append new tweet to the tweet section
-  tweetsContainer.appendChild(tweetCard);
-
-  // Clear the input fields after submission
+  addTweetToDB(tweet); // Add tweet to IndexedDB
   document.getElementById("tweetInput").value = "";
   document.getElementById("tweetName").value = "";
 }
 
-// Call loadTweets on page load to restore previous tweets
-window.addEventListener("load", loadTweets);
+/**
+ * Load tweets on page load
+ */
+window.addEventListener("load", () => {
+  openDB(); // Open the IndexedDB
+});
