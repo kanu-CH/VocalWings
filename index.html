@@ -7,213 +7,116 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VocalWings - Smart Bird Sound Analysis</title>
 
-  <!--
-    - favicon
-  -->
+  <!-- favicon -->
   <link rel="icon" type="image/x-icon" href="./favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
   <link rel="apple-touch-icon" href="./apple-touch-icon.png">
-  
-  <!--
-    - custom css link
-  -->
+
+  <!-- custom css link -->
   <link rel="stylesheet" href="./assets/css/style.css">
 
-  <!--
-    - google font link
-  -->
+  <!-- google font link -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto:wght@300;400;500;700&family=Oswald:wght@600&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto:wght@300;400;500;700&family=Oswald:wght@600&display=swap" rel="stylesheet">
 
-    <head>
-      <!-- Ionicons CDN -->
-      <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.esm.js"></script>
-      <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.js"></script>
-    </head>
-    
+  <!-- Ionicons CDN -->
+  <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.js"></script>
 </head>
 
 <body>
 
-  <!--
-    - #HEADER
-  -->
-
+  <!-- HEADER -->
   <header class="header" data-header>
     <div class="container">
-
       <h1>
         <a href="#" class="logo">VocalWings</a>
       </h1>
-
       <button class="nav-open-btn" aria-label="Open Menu" data-nav-open-btn>
         <ion-icon name="menu-outline"></ion-icon>
       </button>
-
       <nav class="navbar" data-navbar>
-
         <button class="nav-close-btn" aria-label="Close Menu" data-nav-close-btn>
           <ion-icon name="close-outline"></ion-icon>
         </button>
-
         <a href="#" class="logo">VocalWings</a>
-
         <ul class="navbar-list">
-
-          <li>
-            <a href="#home" class="navbar-link" data-nav-link>
-              <span>Home</span>
-
-              <ion-icon name="chevron-forward-outline" aria-hidden="true"></ion-icon>
-            </a>
-          </li>
-
-          <li>
-            <a href="#about" class="navbar-link" data-nav-link>
-              <span>About</span>
-
-              <ion-icon name="chevron-forward-outline" aria-hidden="true"></ion-icon>
-            </a>
-          </li>
-
-          <li>
-            <a href="#service" class="navbar-link" data-nav-link>
-              <span>Service</span>
-
-              <ion-icon name="chevron-forward-outline" aria-hidden="true"></ion-icon>
-            </a>
-          </li>
-
-          <li>
-            <a href="#species" class="navbar-link" data-nav-link>
-              <span>Avian Wonders</span>
-
-              <ion-icon name="chevron-forward-outline" aria-hidden="true"></ion-icon>
-            </a>
-          </li>
-
-          <li>
-            <a href="tweets.html" class="navbar-link" data-nav-link target="_blank">
-              <span>Tweets</span>
-
-              <ion-icon name="chevron-forward-outline" aria-hidden="true"></ion-icon>
-            </a>
-          </li>
-
-          <li>
-            <a href="#footer" class="navbar-link" data-nav-link>
-              <span>Contact</span>
-
-              <ion-icon name="chevron-forward-outline" aria-hidden="true"></ion-icon>
-            </a>
-          </li>
-
+          <li><a href="index.html#home" class="navbar-link" data-nav-link><span>Home</span></a></li>
+          <li><a href="index.html#about" class="navbar-link" data-nav-link><span>About</span></a></li>
+          <li><a href="index.html#service" class="navbar-link" data-nav-link><span>Service</span></a></li>
+          <li><a href="index.html#species" class="navbar-link" data-nav-link><span>Avian Wonders</span></a></li>
+          <li><a href="tweets.html" class="navbar-link" target="_blank"><span>Tweets</span></a></li>
+          <li><a href="#footer" class="navbar-link" data-nav-link><span>Contact</span></a></li>
         </ul>
-
       </nav>
-
       <div class="header-action">
-
         <button class="btn btn-primary" onclick="window.open('audio.html', '_blank')">
           <span>Explore</span>
           <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
         </button>
-        
       </div>
     </div>
   </header>
 
-
-
   <main>
     <article>
 
-      <!--
-        - #HERO
-      -->
-
       <section class="hero" id="home">
         <div class="container">
-
           <p class="section-subtitle">
             <img src="./assets/images/subtitle-img-white.png" width="32" height="7" alt="Wavy line">
-
             <span>Welcome to VocalWings</span>
           </p>
-
           <h2 class="h1 hero-title">
             Unlock the Power of <strong>Birdsong Analysis</strong>
           </h2>
-
           <p class="hero-text">
-            Explore advanced AI-driven bioacoustic analysis to identify and classify bird species through their unique vocalizations.  
-            Enhance conservation efforts with cutting-edge avian taxonomy research.
+            Explore advanced AI-driven bioacoustic analysis to identify and classify bird species through their unique vocalizations. Enhance conservation efforts with cutting-edge avian taxonomy research.
           </p>
-
           <button class="btn btn-primary" onclick="window.open('audio.html', '_blank')">
             <span>Explore</span>
-
             <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
           </button>
-
         </div>
       </section>
 
-
-      <!--
-        - #FEATURES
-      -->
-
       <section class="section features">
         <div class="container">
-
           <ul class="features-list">
-
             <li class="features-item">
               <div class="item-icon">
                 <ion-icon name="analytics-outline"></ion-icon>
               </div>
-
               <div>
                 <h3 class="h4 item-title">AI Analysis</h3>
-
                 <p class="item-text">
                   Leverage advanced neural inference to identify bird species through their vocal patterns.
                 </p>
               </div>
             </li>
-
             <li class="features-item">
               <div class="item-icon">
                 <ion-icon name="git-compare-outline"></ion-icon>
               </div>
-
               <div>
                 <h3 class="h4 item-title">Live Processing</h3>
-
                 <p class="item-text">
                   Analyze live or recorded bird songs for real-time species classification.
                 </p>
               </div>
             </li>
-
             <li class="features-item">
               <div class="item-icon">
                 <ion-icon name="leaf-outline"></ion-icon>
               </div>
-
               <div>
                 <h3 class="h4 item-title">Eco Insights</h3>
-
                 <p class="item-text">
                   Use bioacoustic data to support biodiversity research and conservation. 
                 </p>
               </div>
             </li>
-
             <li class="features-item">
               <div class="item-icon">
                 <ion-icon name="bulb-outline"></ion-icon>
@@ -229,547 +132,16 @@
         </div>
       </section>
 
-
-      <!--
-        - #ABOUT
-      -->
-
-      <section class="section about" id="about">
-        <div class="container">
-      
-          <div class="about-banner">
-            <h2 class="deco-title">About Us</h2>
-            <img src="./assets/images/deco-img.png" width="58" height="261" alt="" class="deco-img">
-      
-            <div class="banner-row">
-              <div class="banner-col">
-                <img src="./assets/images/about-banner-1.jpg" width="315" height="380" loading="lazy" alt="Bird Audio Upload"
-                  class="about-img w-100">
-                <img src="./assets/images/about-banner-2.jpg" width="386" height="250" loading="lazy" alt="AI Sound Analysis"
-                  class="about-img about-img-2 w-100">
-              </div>
-              <div class="banner-col">
-                <img src="./assets/images/about-banner-3.jpg" width="250" height="277" loading="lazy" alt="Spectrogram Analysis"
-                  class="about-img about-img-3 w-100">
-                <img src="./assets/images/about-banner-4.jpg" width="315" height="380" loading="lazy" alt="Bird Species Classification"
-                  class="about-img w-100">
-              </div>
-            </div>
-          </div>
-      
-          <div class="about-content">
-            <p class="section-subtitle">
-              <img src="./assets/images/subtitle-img-green.png" width="32" height="7" alt="Wavy line">
-              <span>Why Choose Us</span>
-            </p>
-      
-            <h2 class="h2 section-title">
-              Identify Birds by Their Songs with AI
-            </h2>
-      
-            <p class="section-text">
-              Our platform allows users to upload bird audio and receive instant species classification using 
-              AI-driven sound analysis. Perfect for researchers, conservationists, and bird enthusiasts!
-            </p>
-      
-            <ul class="tab-list">
-              <li class="tab-item">
-                <div class="item-icon">
-                  <ion-icon name="checkmark-circle"></ion-icon>
-                </div>
-                <p class="tab-text">Upload a bird sound for analysis</p>
-              </li>
-      
-              <li class="tab-item">
-                <div class="item-icon">
-                  <ion-icon name="checkmark-circle"></ion-icon>
-                </div>
-                <p class="tab-text">AI detects and classifies the bird species</p>
-              </li>
-      
-              <li class="tab-item">
-                <div class="item-icon">
-                  <ion-icon name="checkmark-circle"></ion-icon>
-                </div>
-                <p class="tab-text">Fast, reliable, and easy-to-use</p>
-              </li>
-      
-              <li class="tab-item">
-                <div class="item-icon">
-                  <ion-icon name="checkmark-circle"></ion-icon>
-                </div>
-                <p class="tab-text">Helping researchers and conservation efforts</p>
-              </li>
-            </ul>
-      
-            <button class="btn btn-secondary" onclick="window.open('learn.html', '_blank')">
-              <span>Learn More</span>
-              <ion-icon name="information-circle-outline" aria-hidden="true"></ion-icon>
-            </button>
-      
-          </div>
-      
-        </div>
-      </section>
-      
-
-      <!--
-        - #CTA
-      -->
-
-      <section class="section cta">
-        <div class="container">
-      
-          <div class="cta-content">
-            <h2 class="h2 section-title">Discover and Learn About Birds Through Sound</h2>
-      
-            <button class="btn btn-outline" onclick="location.href='#species'">
-              <span>Explore Bird Species</span>
-              <ion-icon name="earth-outline" aria-hidden="true"></ion-icon>
-            </button>
-          </div>
-      
-          <figure class="cta-banner">
-            <img src="./assets/images/cta-banner.jpg" width="520" height="228" loading="lazy" 
-              alt="Bird Sound Analysis" class="img-cover">
-          </figure>
-      
-        </div>
-      </section>
-
-      <!--
-        - #SERVICE
-      -->
-
-      <section class="section service" id="service" style="background-image: url('./assets/images/service-map.png')">
-        <div class="container">
-      
-          <p class="section-subtitle">
-            <img src="./assets/images/subtitle-img-green.png" width="32" height="7" alt="Wavy line">
-            <span>What We Offer</span>
-          </p>
-      
-          <h2 class="h2 section-title">
-            AI-Powered <strong>Bird Sound Identification</strong>
-          </h2>
-      
-          <ul class="service-list">
-      
-            <li>
-              <div class="service-card">
-                <div class="card-icon">
-                  <ion-icon name="mic-outline"></ion-icon>
-                </div>
-      
-                <h3 class="h3 card-title">Sound Analysis</h3>
-                <p class="card-text">
-                  Our AI analyzes bird calls and songs to classify species with high accuracy.
-                </p>
-              </div>
-            </li>
-      
-            <li>
-              <div class="service-card">
-                <div class="card-icon">
-                  <ion-icon name="scan-outline"></ion-icon>
-                </div>
-      
-                <h3 class="h3 card-title">Species Identification</h3>
-                <p class="card-text">
-                  Instantly recognize and learn about different bird species based on sound patterns.
-                </p>
-              </div>
-            </li>
-      
-            <li>
-              <div class="service-card">
-                <div class="card-icon">
-                  <ion-icon name="flask-outline"></ion-icon>
-                </div>
-      
-                <h3 class="h3 card-title">Conservation Research</h3>
-                <p class="card-text">
-                  Helping researchers study bird populations and monitor biodiversity effortlessly.
-                </p>
-              </div>
-            </li>
-      
-            <li>
-              <div class="service-card">
-                <div class="card-icon">
-                  <ion-icon name="people-outline"></ion-icon>
-                </div>
-      
-                <h3 class="h3 card-title">Collaboration</h3>
-                  <p class="card-text">
-                    Connecting bird enthusiasts and researchers to share insights.
-                  </p>
-
-              </div>
-            </li>
-      
-          </ul>
-      
-        </div>
-      </section>
-      
-
-
-
-      <!--
-        - #avian
-      -->
-
-      <!--
-        - #BIRD SPECIES
-      -->
-
-<section class="section species" id="species">
-  <div class="container">
-    <p class="section-subtitle">
-      <img src="./assets/images/subtitle-img-green.png" width="32" height="7" alt="Wavy line">
-      <span>Meet the Avian Wonders</span>
-    </p>
-
-    <h2 class="h2 section-title">
-      Detailed Insights into <strong>Bird Species & Their Calls</strong>
-    </h2>
-    <br>
-    <br>
-    <ul class="avian-list">
-      <li>
-        <div class="avian-card">
-          <figure class="card-banner">
-            <img src="./assets/images/bird-1.jpg" width="520" height="325" loading="lazy" alt="Bald Eagle"
-              class="img-cover">
-          </figure>
-    
-          <div class="card-content">
-            <h3 class="h3 card-title">Bald Eagle</h3>
-            <p class="card-text">
-              A powerful bird of prey native to North America, recognized by its white head and yellow beak. 
-              It emits a high-pitched whistle and is known for its keen hunting skills and strong talons.
-            </p>
-          </div>
-        </div>
-      </li>
-    
-      <li>
-        <div class="avian-card">
-          <figure class="card-banner">
-            <img src="./assets/images/bird-2.jpg" width="520" height="325" loading="lazy" alt="Scarlet Macaw"
-              class="img-cover">
-          </figure>
-    
-          <div class="card-content">
-            <h3 class="h3 card-title">Scarlet Macaw</h3>
-            <p class="card-text">
-              A highly intelligent parrot with vibrant red, blue, and yellow feathers. 
-              It has a loud, harsh call and uses vocalizations to communicate with its flock.
-            </p>
-          </div>
-        </div>
-      </li>
-    
-      <li>
-        <div class="avian-card">
-          <figure class="card-banner">
-            <img src="./assets/images/bird-3.jpg" width="520" height="325" loading="lazy" alt="Kingfisher"
-              class="img-cover">
-          </figure>
-    
-          <div class="card-content">
-            <h3 class="h3 card-title">Kingfisher</h3>
-            <p class="card-text">
-              A skilled hunter often found near water, diving swiftly to catch fish. 
-              It produces sharp, chattering calls that can be heard during flight.
-            </p>
-          </div>
-        </div>
-      </li>
-    
-      <li>
-        <div class="avian-card">
-          <figure class="card-banner">
-            <img src="./assets/images/bird-4.jpg" width="520" height="325" loading="lazy" alt="Peacock"
-              class="img-cover">
-          </figure>
-    
-          <div class="card-content">
-            <h3 class="h3 card-title">Peacock</h3>
-            <p class="card-text">
-              Famous for its shimmering tail feathers, the peacock’s call is a loud, piercing scream. 
-              It uses a combination of visual displays and vocalizations to attract mates.
-            </p>
-          </div>
-        </div>
-      </li>
-    
-      <li>
-        <div class="avian-card">
-          <figure class="card-banner">
-            <img src="./assets/images/bird-5.jpg" width="520" height="325" loading="lazy" alt="Snowy Owl"
-              class="img-cover">
-          </figure>
-    
-          <div class="card-content">
-            <h3 class="h3 card-title">Snowy Owl</h3>
-            <p class="card-text">
-              A stunning Arctic owl with a deep, booming hoot. 
-              It is a silent hunter, gliding noiselessly over snowy landscapes in search of prey.
-            </p>
-          </div>
-        </div>
-      </li>
-    
-      <li>
-        <div class="avian-card">
-          <figure class="card-banner">
-            <img src="./assets/images/bird-6.jpg" width="520" height="325" loading="lazy" alt="Hummingbird"
-              class="img-cover">
-          </figure>
-    
-          <div class="card-content">
-            <h3 class="h3 card-title">Hummingbird</h3>
-            <p class="card-text">
-              The smallest bird species, known for its rapid wing beats and hovering ability. 
-              It produces a soft, high-pitched chirping sound while feeding on nectar.
-            </p>
-          </div>
-        </div>
-      </li>
-    
-    </ul>
-    
-  </div>
-</section>
-
-
-
-      <!--
-        - #TESTIMONIALS
-      -->
-
-      <section class="testi">
-
-        <div class="testi-content">
-
-          <p class="section-subtitle">
-            <img src="./assets/images/subtitle-img-green.png" width="32" height="7" alt="Wavy line">
-
-            <span>Our Bird Enthusiasts</span>
-          </p>
-
-          <h2 class="h2 section-title">
-            What Birdwatchers Say About <strong>Our Platform</strong>
-          </h2>
-
-          <div class="testi-card">
-
-            <figure class="card-avatar">
-              <img src="./assets/images/testi-avatar-2.png" width="60" height="60" loading="lazy" alt="David S. Neuman">
-            </figure>
-
-            <div>
-              <blockquote class="testi-text">
-                "This platform has completely transformed my birdwatching experience! Identifying bird calls has never been easier, and I've learned so much about different species."
-              </blockquote>
-              <h3 class="testi-name">David S. Neuman</h3>
-              <p class="testi-title">Wildlife Photographer</p>
-            </div>
-          </div>
-          <br>
-          <br>
-          <div class="testi-card">
-            <figure class="card-avatar">
-              <img src="./assets/images/testi-avatar.png" width="60" height="60" loading="lazy" alt="Emma R. Clarke">
-            </figure>
-            <div>
-              <blockquote class="testi-text">
-                "As an ornithologist, I find this tool incredibly valuable. It has helped me document rare bird calls with high accuracy, making research much more efficient."
-              </blockquote>
-
-              <h3 class="testi-name">Emma R. Clarke</h3>
-
-              <p class="testi-title">Ornithologist & Researcher</p>
-            </div>
-          </div>
-        </div>
-        <figure class="testi-banner">
-          <img src="./assets/images/testi-banner.jpg" width="960" height="846" loading="lazy" alt="Rhinoceros"
-            class="img-cover">
-        </figure>
-
-      </section>
-      
-      <!--
-        - #research
-      -->
-
-      <section class="section research" id="research">
-        <div class="container">
-
-          <p class="section-subtitle">
-            <img src="./assets/images/subtitle-img-green.png" width="32" height="7" alt="Wavy line">
-
-            <span>Recent Discoveries</span>
-
-            <img src="./assets/images/subtitle-img-green.png" width="32" height="7" alt="Wavy line">
-          </p>
-
-          <h2 class="h2 section-title">
-            Latest Research on <strong>Avian Bioacoustics</strong>
-          </h2>
-
-          <ul class="research-list">
-
-            <li>
-              <div class="research-card">
-
-                <div class="wrapper">
-
-                  <div class="card-content">
-                    <p class="card-subtitle">Published: 2025</p>
-
-                    <h3 class="card-title">Analyzing Bird Calls to Predict Migration Patterns</h3>
-
-                    <p class="card-text">Our team used neural inference models to detect shifts in migration patterns using bioacoustic data.</p>
-
-                  </div>
-
-                  <button class="btn btn-secondary" onclick="downloadPDF('./assets/research-paper.pdf')">
-                    <span>Read Study</span>
-                    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-                  </button>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="research-card">
-                <div class="wrapper">
-
-                  <div class="card-content">
-                    <p class="card-subtitle">Published: 2025</p>
-
-                    <h3 class="card-title">Decoding Bird Songs with AI</h3>
-
-                    <p class="card-text">We developed a new AI model capable of classifying bird calls with 98% accuracy.</p>
-
-                  </div>
-
-                  <button class="btn btn-secondary" onclick="downloadPDF('./assets/research-paper.pdf')">
-                    <span>Read Study</span>
-                    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-                  </button>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="research-card">
-
-                <div class="wrapper">
-
-                  <div class="card-content">
-                    <p class="card-subtitle">Published: 2025</p>
-
-                    <h3 class="card-title">Impact of Noise Pollution on Bird Communication</h3>
-
-                    <p class="card-text">A recent study highlights how urban noise affects avian vocalization and communication efficiency.</p>
-
-                  </div>
-
-                  <button class="btn btn-secondary" onclick="downloadPDF('./assets/research-paper.pdf')">
-                    <span>Read Study</span>
-                    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-                  </button>
-                </div>
-
-              </div>
-              <div class="research-card">
-
-                <div class="wrapper">
-
-                  <div class="card-content">
-                    <p class="card-subtitle">Published: 2025</p>
-
-                    <h3 class="card-title">Automated Bird Species Identification Using Deep Learning</h3>
-
-                    <p class="card-text">Our deep learning model successfully identifies bird species based on bioacoustic signals.</p>
-
-
-                  </div>
-
-                  <button class="btn btn-secondary" onclick="downloadPDF('./assets/research-paper.pdf')">
-                    <span>Read Study</span>
-                    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-                  </button>
-
-                </div>
-
-              </div>
-              <div class="research-card">
-
-                <div class="wrapper">
-
-                  <div class="card-content">
-                    <p class="card-subtitle">Published: 2025</p>
-
-                    <h3 class="card-title">Effects of Climate Change on Bird Vocalization</h3>
-
-                    <p class="card-text">Our research examines how rising temperatures influence bird song patterns.</p>
-
-
-                  </div>
-
-                  <button class="btn btn-secondary" onclick="downloadPDF('./assets/research-paper.pdf')">
-                    <span>Read Study</span>
-                    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-                  </button>
-
-                </div>
-
-              </div>
-            </li>
-
-          </ul>
-
-          <button class="btn btn-secondary" onclick="window.open('learn.html', '_blank')">
-            <span>Learn More About Us</span>
-
-            <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
-          </button>
-
-        </div>
-      </section>
     </article>
   </main>
 
-
-
-
-
-  <!--
-    - #FOOTER
-  -->
-
   <footer class="footer" id="footer">
     <div class="container">
-  
       <div class="footer-content">
-        
-        <!-- About Section -->
         <div class="footer-section about-footer">
           <h3>About Us</h3>
           <p>We specialize in bioacoustic research, leveraging AI to analyze avian sounds and contribute to wildlife conservation.</p>
         </div>
-  
-        <!-- Quick Links -->
         <div class="footer-section quick-links">
           <h3>Quick Links</h3>
           <ul class="footer-list">
@@ -779,31 +151,15 @@
             <li><a href="#footer" class="footer-link">Contact</a></li>
           </ul>
         </div>
-  
-        <!-- Contact Section -->
         <div class="footer-section contact">
           <h3>Contact Us</h3>
           <div class="contact-info">
-            <p><ion-icon name="mail-outline"></ion-icon> <a href="mailto:contact@kanu-ch.com" title="Email us at contact@VocalWings">contact@VocalWings</a></p>
-            <br>
+            <p><ion-icon name="mail-outline"></ion-icon> <a href="mailto:contact@kanu-ch.com">contact@VocalWings</a></p>
             <p><ion-icon name="call-outline"></ion-icon> <a href="tel:XXXXXXXXXX">+91 XXXXXXXXXX</a></p>
           </div>
-          <p><ion-icon name="location-outline"></ion-icon> Ajay Kumar Garg Enginnering College, Ghaziabad, Uttar Pradesh</p>
-        </div>
-  
-        <!-- Social Media -->
-        <div class="footer-section social">
-          <h3>Follow Us</h3>
-          <div class="social-icons">
-            <a href="#" class="social-link" title="Follow us on Facebook"><ion-icon name="logo-facebook"></ion-icon></a>
-            <a href="#" class="social-link" title="Follow us on Twitter"><ion-icon name="logo-twitter"></ion-icon></a>
-            <a href="#" class="social-link" title="LinkedIn"><ion-icon name="logo-linkedin"></ion-icon></a>
-            <a href="#" class="social-link" title="Instagram"><ion-icon name="logo-instagram"></ion-icon></a>
-          </div>
+          <p><ion-icon name="location-outline"></ion-icon> Ajay Kumar Garg Engineering College, Ghaziabad, Uttar Pradesh</p>
         </div>
       </div>
-  
-      <!-- Footer Bottom -->
       <div class="footer-bottom">
         <ul class="footer-list">
           <li><a href="#" class="footer-link">Terms of Use</a></li>
@@ -813,12 +169,11 @@
           &copy; 2025 <a href="#" class="copyright-link">VocalWings</a>. All Rights Reserved.
         </p>
       </div>
-  
     </div>
   </footer>
-  
+
+  <script src="./assets/js/script.js"></script>
 
 </body>
-<script src="./assets/js/script.js"></script>
 
 </html>
