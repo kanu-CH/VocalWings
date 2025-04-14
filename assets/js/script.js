@@ -36,65 +36,13 @@ window.addEventListener("scroll", function () {
     : header.classList.remove("active");
 });
 
-// Audio file handling and upload to backend
-document.getElementById("audioFile").addEventListener("change", function (event) {
-  const file = event.target.files[0];
-  const error = document.getElementById("error");
-  const audioPlayer = document.getElementById("audioPlayer");
-
-  if (file) {
-    if (!file.type.startsWith("audio/")) {
-      error.textContent = "Please upload a valid audio file.";
-      audioPlayer.style.display = "none";
-      return;
-    }
-    error.textContent = "";  // Clear any previous error message
-
-    // Show the selected audio file in the player
-    const objectURL = URL.createObjectURL(file);
-    audioPlayer.src = objectURL;
-    audioPlayer.style.display = "block";
-
-    // Now we will upload the file to the server
-    uploadAudioFile(file);
-  }
-});
-
-async function uploadAudioFile(file) {
-  const formData = new FormData();
-  formData.append("audioFile", file);
-
-  try {
-    // Show "Uploading..." status
-    document.getElementById("uploadStatus").innerText = "Uploading...";
-
-    // Send the file to the backend API
-    const response = await fetch("http://localhost:3000/api/audio/upload", {
-      method: "POST",
-      body: formData,
-    });
-
-    if (response.ok) {
-      // Handle the successful upload and classification result
-      const data = await response.json();
-      document.getElementById("uploadStatus").innerText = `Upload successful! Bird species: ${data.classification}`;
-    } else {
-      // Handle error on backend
-      document.getElementById("uploadStatus").innerText = "Error uploading file!";
-    }
-  } catch (error) {
-    // Handle any unexpected errors
-    document.getElementById("uploadStatus").innerText = `Upload failed: ${error.message}`;
-  }
-}
-
 /**
  * Tweets persistence
  */
 
 // Function to load tweets from localStorage
 function loadTweets() {
-  const tweetsContainer = document.querySelector(".tweets-content");
+  const tweetsContainer = document.querySelector(".tweets-list");
   const savedTweets = JSON.parse(localStorage.getItem("tweets")) || [];
 
   // Clear existing tweets before adding new ones
@@ -146,7 +94,7 @@ function addTweet() {
   localStorage.setItem("tweets", JSON.stringify(savedTweets));
 
   // Add the tweet to the UI
-  let tweetsContainer = document.querySelector(".tweets-content");
+  let tweetsContainer = document.querySelector(".tweets-list");
 
   let tweetCard = document.createElement("div");
   tweetCard.classList.add("tweets-card");
