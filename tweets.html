@@ -7,233 +7,95 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VocalWings - tweets</title>
 
-  <!--
-    - favicon
-  -->
+  <!-- favicon -->
   <link rel="icon" type="image/x-icon" href="./favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
   <link rel="apple-touch-icon" href="./apple-touch-icon.png">
-  
 
-
-  <!--
-    - custom css link
-  -->
+  <!-- custom css link -->
   <link rel="stylesheet" href="./assets/css/audio&learn&tweets.css">
 
-  <!--
-    - google font link
-  -->
+  <!-- google font link -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto:wght@300;400;500;700&family=Oswald:wght@600&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto:wght@300;400;500;700&family=Oswald:wght@600&display=swap" rel="stylesheet">
 
-      <!-- Ionicons CDN -->
-      <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.esm.js"></script>
-      <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.js"></script>
-    
+  <!-- Ionicons CDN -->
+  <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.js"></script>
 </head>
 
 <body>
 
-  <!--
-    - #HEADER
-  -->
-
+  <!-- HEADER -->
   <header class="header" data-header>
     <div class="container">
-
       <h1>
         <a href="#" class="logo">VocalWings</a>
       </h1>
-
       <button class="nav-open-btn" aria-label="Open Menu" data-nav-open-btn>
         <ion-icon name="menu-outline"></ion-icon>
       </button>
-
       <nav class="navbar" data-navbar>
-
         <button class="nav-close-btn" aria-label="Close Menu" data-nav-close-btn>
           <ion-icon name="close-outline"></ion-icon>
         </button>
-
         <a href="#" class="logo">VocalWings</a>
-
         <ul class="navbar-list">
-
-          <li>
-            <a href="index.html#home" class="navbar-link" data-nav-link>
-              <span>Home</span>
-
-              <ion-icon name="chevron-forward-outline" aria-hidden="true"></ion-icon>
-            </a>
-          </li>
-
-          <li>
-            <a href="index.html#about" class="navbar-link" data-nav-link>
-              <span>About</span>
-
-              <ion-icon name="chevron-forward-outline" aria-hidden="true"></ion-icon>
-            </a>
-          </li>
-
-          <li>
-            <a href="index.html#service" class="navbar-link" data-nav-link>
-              <span>Service</span>
-
-              <ion-icon name="chevron-forward-outline" aria-hidden="true"></ion-icon>
-            </a>
-          </li>
-
-          <li>
-            <a href="index.html#species" class="navbar-link" data-nav-link>
-              <span>Avian Wonders</span>
-
-              <ion-icon name="chevron-forward-outline" aria-hidden="true"></ion-icon>
-            </a>
-          </li>
-
-          <li>
-            <a href="tweets.html" class="navbar-link" data-nav-link target="_blank">
-              <span>Tweets</span>
-
-              <ion-icon name="chevron-forward-outline" aria-hidden="true"></ion-icon>
-            </a>
-          </li>
-
-          <li>
-            <a href="#footer" class="navbar-link" data-nav-link>
-              <span>Contact</span>
-
-              <ion-icon name="chevron-forward-outline" aria-hidden="true"></ion-icon>
-            </a>
-          </li>
-
+          <li><a href="index.html#home" class="navbar-link" data-nav-link><span>Home</span></a></li>
+          <li><a href="index.html#about" class="navbar-link" data-nav-link><span>About</span></a></li>
+          <li><a href="index.html#service" class="navbar-link" data-nav-link><span>Service</span></a></li>
+          <li><a href="index.html#species" class="navbar-link" data-nav-link><span>Avian Wonders</span></a></li>
+          <li><a href="tweets.html" class="navbar-link" data-nav-link target="_blank"><span>Tweets</span></a></li>
+          <li><a href="#footer" class="navbar-link" data-nav-link><span>Contact</span></a></li>
         </ul>
-
       </nav>
-
       <div class="header-action">
-
         <button class="btn btn-primary" onclick="window.open('audio.html', '_blank')">
           <span>Explore</span>
-
           <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
         </button>
-
       </div>
-
     </div>
   </header>
-      <!-- tweets section -->
-      <section class="tweets">
 
-        <div class="tweets-content container">
-      
-          <p class="section-subtitle">
-            <img src="./assets/images/subtitle-img-green.png" width="32" height="7" alt="Wavy line">
-            <span>The VocalWings Tweets</span>
-          </p>
-      
-          <h2 class="h2 section-title">
-            Explore & Share <strong>Birdwatching Moments</strong>
-          </h2>
-      
-          <div class="tweets-card">
-            <figure class="card-avatar">
-              <img src="./assets/images/boy.png" width="60" height="60" loading="lazy" alt="John Doe">
-            </figure>
-      
-            <div>
-              <blockquote class="tweets-text">
-                Just spotted a Scarlet Tanager for the first time! What a beauty. #Birdwatching #NatureLover
-              </blockquote>
-      
-              <h3 class="tweets-name">John Doe</h3>
-              <p class="tweets-title">@JohnBirds</p>
-            </div>
-          </div>
-      
-          <div class="tweets-card">
-            <figure class="card-avatar">
-              <img src="./assets/images/man.png" width="60" height="60" loading="lazy" alt="Jane Smith">
-            </figure>
-      
-            <div>
-              <blockquote class="tweets-text">
-                Woke up to the sound of a woodpecker drumming on my balcony! Nature’s morning alarm. #Wildlife #BirdLover
-              </blockquote>
-      
-              <h3 class="tweets-name">Jane Smith</h3>
-              <p class="tweets-title">@NatureJane</p>
-            </div>
-          </div>
-          
-      
-          <div class="tweets-card">
-            <figure class="card-avatar">
-              <img src="./assets/images/profile.png" width="60" height="60" loading="lazy" alt="Mark Johnson">
-            </figure>
-      
-            <div>
-              <blockquote class="tweets-text">
-                Tried using a bird call app today and successfully attracted a group of finches. Amazing experience! #TechMeetsNature
-              </blockquote>
-      
-              <h3 class="tweets-name">Mark Johnson</h3>
-              <p class="tweets-title">@MarkTheBirder</p>
-            </div>
-          </div>
-      
-          <div class="tweets-card">
-            <figure class="card-avatar">
-              <img src="./assets/images/girl.png" width="60" height="60" loading="lazy" alt="Emily Brown">
-            </figure>
-      
-            <div>
-              <blockquote class="tweets-text">
-                Spent the evening watching a flock of geese fly in perfect formation. Nature never ceases to amaze! #BirdsInFlight
-              </blockquote>
-      
-              <h3 class="tweets-name">Emily Brown</h3>
-              <p class="tweets-title">@WildlifeEmily</p>
-            </div>
-          </div>
-      
-        </div>
-        <div class="tweet-form container">
-          <p class="section-subtitle">
-            <img src="./assets/images/subtitle-img-green.png" width="32" height="7" alt="Wavy line">
-            <span>Tweet Now</span>
-          </p>
-          <input type="text" id="tweetName" placeholder="Enter your name">
-          <textarea id="tweetInput" placeholder="Share your birdwatching moment..." rows="3"></textarea>
-          <button class="btn btn-primary" onclick="addTweet()">Tweet</button>
+  <!-- TWEETS SECTION -->
+  <section class="tweets">
+    <div class="tweets-content container">
+      <p class="section-subtitle">
+        <img src="./assets/images/subtitle-img-green.png" width="32" height="7" alt="Wavy line">
+        <span>The VocalWings Tweets</span>
+      </p>
+      <h2 class="h2 section-title">
+        Explore & Share <strong>Birdwatching Moments</strong>
+      </h2>
+
+      <!-- Tweets will be dynamically added here -->
+      <div class="tweets-content">
+        <!-- Dynamic tweets will be rendered by JS -->
       </div>
-      
-      
-      </section>
-      
+    </div>
 
+    <!-- Tweet Form -->
+    <div class="tweet-form container">
+      <p class="section-subtitle">
+        <img src="./assets/images/subtitle-img-green.png" width="32" height="7" alt="Wavy line">
+        <span>Tweet Now</span>
+      </p>
+      <input type="text" id="tweetName" placeholder="Enter your name">
+      <textarea id="tweetInput" placeholder="Share your birdwatching moment..." rows="3"></textarea>
+      <button class="btn btn-primary" onclick="addTweet()">Tweet</button>
+    </div>
+  </section>
 
-  <!--
-    - #FOOTER
-  -->
-
+  <!-- FOOTER -->
   <footer class="footer" id="footer">
     <div class="container">
-  
       <div class="footer-content">
-        
-        <!-- About Section -->
         <div class="footer-section about-footer">
           <h3>About Us</h3>
           <p>We specialize in bioacoustic research, leveraging AI to analyze avian sounds and contribute to wildlife conservation.</p>
         </div>
-  
-        <!-- Quick Links -->
         <div class="footer-section quick-links">
           <h3>Quick Links</h3>
           <ul class="footer-list">
@@ -243,8 +105,6 @@
             <li><a href="#footer" class="footer-link">Contact</a></li>
           </ul>
         </div>
-  
-        <!-- Contact Section -->
         <div class="footer-section contact">
           <h3>Contact Us</h3>
           <div class="contact-info">
@@ -253,20 +113,7 @@
           </div>
           <p><ion-icon name="location-outline"></ion-icon> Ajay Kumar Garg Enginnering College, Ghaziabad, Uttar Pradesh</p>
         </div>
-  
-      <!-- Social Media -->
-      <div class="footer-section social">
-        <h3>Follow Us</h3>
-        <div class="social-icons">
-          <a href="#" class="social-link" title="Follow us on Facebook"><ion-icon name="logo-facebook"></ion-icon></a>
-          <a href="#" class="social-link" title="Follow us on Twitter"><ion-icon name="logo-twitter"></ion-icon></a>
-          <a href="#" class="social-link" title="LinkedIn"><ion-icon name="logo-linkedin"></ion-icon></a>
-          <a href="#" class="social-link" title="Instagram"><ion-icon name="logo-instagram"></ion-icon></a>
-        </div>
       </div>
-    </div>
-  
-      <!-- Footer Bottom -->
       <div class="footer-bottom">
         <ul class="footer-list">
           <li><a href="#" class="footer-link">Terms of Use</a></li>
@@ -276,12 +123,10 @@
           &copy; 2025 <a href="#" class="copyright-link">VocalWings</a>. All Rights Reserved.
         </p>
       </div>
-  
     </div>
   </footer>
-  
+
+  <!-- JavaScript -->
+  <script src="./assets/js/script.js"></script>
 </body>
-<script src="./assets/js/script.js"></script>
-<script>
-</script>
 </html>

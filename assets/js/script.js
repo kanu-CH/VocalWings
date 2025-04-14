@@ -97,8 +97,10 @@ function loadTweets() {
   const tweetsContainer = document.querySelector(".tweets-content");
   const savedTweets = JSON.parse(localStorage.getItem("tweets")) || [];
 
+  // Clear existing tweets before adding new ones
+  tweetsContainer.innerHTML = '';
+
   savedTweets.forEach(tweet => {
-    // Create a new tweet card for each saved tweet
     let tweetCard = document.createElement("div");
     tweetCard.classList.add("tweets-card");
 
@@ -112,8 +114,8 @@ function loadTweets() {
         <p class="tweets-title">@YourHandle</p>
       </div>
     `;
-    
-    // Append new tweet to the tweet section
+
+    // Append new tweet to the container
     tweetsContainer.appendChild(tweetCard);
   });
 }
@@ -146,7 +148,6 @@ function addTweet() {
   // Add the tweet to the UI
   let tweetsContainer = document.querySelector(".tweets-content");
 
-  // Create a new tweet card
   let tweetCard = document.createElement("div");
   tweetCard.classList.add("tweets-card");
 
@@ -164,7 +165,7 @@ function addTweet() {
   // Append new tweet to the tweet section
   tweetsContainer.appendChild(tweetCard);
 
-  // Clear the input field after submission
+  // Clear the input fields after submission
   document.getElementById("tweetInput").value = "";
   document.getElementById("tweetName").value = "";
 }
