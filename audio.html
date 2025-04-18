@@ -261,39 +261,6 @@
     </footer>
 
     <script src="./assets/js/script.js"></script>
-    <!-- <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const fileInput = document.getElementById("audioFile");
-      const errorText = document.getElementById("error");
-      const audioPlayer = document.getElementById("audioPlayer");
-
-      fileInput.addEventListener("change", function (event) {
-        const file = event.target.files[0];
-
-        if (!file) {
-          errorText.textContent = "No file selected.";
-          return;
-        }
-
-        // Validate if the file is .ogg format
-        const allowedTypes = ["audio/ogg"];
-        if (!allowedTypes.includes(file.type)) {
-          errorText.textContent = "Invalid file type. Please upload an OGG file.";
-          fileInput.value = ""; // Reset input
-          return;
-        }
-
-        // Reset error message
-        errorText.textContent = "";
-
-        // Load and play audio
-        const fileURL = URL.createObjectURL(file);
-        audioPlayer.src = fileURL;
-        audioPlayer.style.display = "block"; // Show audio player
-        audioPlayer.play();
-      });
-    });
-  </script> -->
 
     <script>
       async function sendAudioToBackend(file) {
